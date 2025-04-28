@@ -22,28 +22,24 @@
   left: 0;
 }
 
-/* キャンディ */
+/* 共通のキャンディスタイル */
 .candy {
   width: 20px;
   height: 20px;
-  background-color: yellow;
-  border: 2px solid orange;
   border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 0;
 }
 
-/* 召喚ボタン */
-#spawn {
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #ff69b4;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 4px #d94f9d;
+/* 自陣用キャンディ（ピンク） */
+.my-candy {
+  background-color: pink;
+  border: 2px solid deeppink;
+}
+
+/* 敵陣用キャンディ（水色） */
+.enemy-candy {
+  background-color: lightblue;
+  border: 2px solid deepskyblue;
 }
 
 #spawn:active {
