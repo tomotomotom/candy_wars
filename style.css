@@ -1,0 +1,63 @@
+/* フィールド（背景） */
+#field {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(#ffe0f0, #ffffff);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #ffaec9;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* キャラクター（仮：ピンクのふわもこ） */
+.unit {
+  width: 40px;
+  height: 40px;
+  background-color: pink;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffb6c1;
+  position: absolute;
+  top: 130px;
+  left: 0;
+}
+
+/* キャンディ */
+.candy {
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  border: 2px solid orange;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 召喚ボタン */
+#spawn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px #d94f9d;
+}
+
+#spawn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px #d94f9d;
+}
+
+.enemy {
+  width: 40px;
+  height: 40px;
+  background-color: lightblue;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #add8e6;
+  position: absolute;
+  top: 130px;
+  right: 0;
+}
