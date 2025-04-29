@@ -1,8 +1,8 @@
-/* フィールド（背景） */
+/* フィールド全体 */
 #field {
-  width: 100%;
+  width: 600px;
   height: 300px;
-  background: linear-gradient(#ffe0f0, #ffffff);
+  background: #ccffcc; /* 草原色 */
   position: relative;
   overflow: hidden;
   border: 2px solid #ffaec9;
@@ -10,50 +10,81 @@
   margin-bottom: 20px;
 }
 
-/* キャラクター（仮：ピンクのふわもこ） */
+/* 川（縦に流れる） */
+#river {
+  position: absolute;
+  width: 100px; /* 川の幅 */
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%); /* 真ん中に置く */
+  background-color: #87ceeb;
+  z-index: 1;
+}
+
+/* 橋（横向きで川の上にかかる） */
+.bridge {
+  position: absolute;
+  width: 120px; /* 川＋ちょっとはみ出すくらい（自然に見える） */
+  height: 20px;
+  background-color: saddlebrown;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 上の橋（上レーン） */
+#bridge-top {
+  top: 80px; /* 上レーンの位置 */
+}
+
+/* 下の橋（下レーン） */
+#bridge-bottom {
+  top: 200px; /* 下レーンの位置 */
+}
+
+/* 自軍ユニット */
 .unit {
   width: 40px;
   height: 40px;
-  background-color: pink;
+  background-image: url('images/ally.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 50%;
-  box-shadow: 0 0 10px #ffb6c1;
   position: absolute;
-  top: 130px;
-  left: 0;
+  z-index: 3;
 }
 
-/* 共通のキャンディスタイル */
+/* 敵軍ユニット */
+.enemy {
+  width: 40px;
+  height: 40px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+}
+
+/* キャンディ（共通） */
 .candy {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   position: absolute;
+  z-index: 3;
 }
 
-/* 自陣用キャンディ（ピンク） */
+/* 自陣キャンディ */
 .my-candy {
   background-color: pink;
   border: 2px solid deeppink;
 }
 
-/* 敵陣用キャンディ（水色） */
+/* 敵陣キャンディ */
 .enemy-candy {
   background-color: lightblue;
   border: 2px solid deepskyblue;
-}
-
-#spawn:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px #d94f9d;
-}
-
-.enemy {
-  width: 40px;
-  height: 40px;
-  background-color: lightblue;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #add8e6;
-  position: absolute;
-  top: 130px;
-  right: 0;
 }
